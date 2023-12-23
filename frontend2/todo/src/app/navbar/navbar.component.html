@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <a class="navbar-brand h1" routerLink="/accueil">ToDoList App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto"> 
+      </ul>
+      
+      <div class="form-inline my-2 my-lg-0">
+        <span>{{user}}</span>
+        <div class="col-auto">
+            <div class="circle-icon">
+              <i class="fas fa-user person-icon"></i>
+            </div>
+          </div>
+        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+        <button class="btn btn-secondary my-2 my-sm-0" (click)="deconnexion()">Déconnexion</button>
+        </div>
+    </div>
+  </nav>

@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<section class="vh-100 bg-image">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <br />
+          <div *ngIf="error" class="font-weight-bold text-danger">
+            {{ error }}
+          </div>
+          <div class="card" style="border-radius: 15px">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Nouvelle Tâche</h2>
+              <form name="newTask" #f="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="name">Nom de la tâche</label>
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    [(ngModel)]="task.name"
+                    name="name"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="description"
+                    >Description de la tâche</label
+                  >
+                  <input
+                    type="text"
+                    id="description"
+                    required
+                    id="name"
+                    [(ngModel)]="task.description"
+                    name="description"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="due_date"
+                    >Date d'échéance</label
+                  >
+                  <input
+                    type="date"
+                    id="due_date"
+                    required
+                    [(ngModel)]="task.due_date"
+                    name="due_date"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button
+                    type="submit"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                  >
+                    Ajouter
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <br /><br />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
